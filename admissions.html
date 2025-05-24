@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Barbara University</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admissions.html" class="active">Admissions</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="campus-life.html">Campus Life</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="apply.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Apply</a></li>
+                    <li><a href="visit.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Visit</a></li>
+                    <li>
+                        <div class="search-box">
+                            <input type="text" placeholder="SEARCH" id="searchInput">
+                            <button onclick="search()"><i class="fas fa-search"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header admissions-header">
+        <h1>Begin Your Barbara Journey</h1>
+        <p>Where bright minds find brighter futures</p>
+    </section>
+
+    <!-- Local Admission Image Section -->
+    <section class="admissions-hero" style="text-align: center; padding: 30px;">
+        <img src="images/admission.jpg" alt="Admissions Banner" style="max-width: 90%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </section>
+
+    <section class="admissions-highlight" style="display: flex; flex-direction: column; gap: 30px; padding: 40px; background: #fff0f5; border-radius: 12px;"></section>
+            <!-- Intro Card -->
+    <div style="background: white; border-left: 8px solid #ff69b4; padding: 25px 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h2 style="color: #d63384; margin-bottom: 10px;">Your Path Starts Here</h2>
+        <p style="font-size: 1rem; line-height: 1.8;">At Barbara University, we don't just admit students — we welcome future innovators, thinkers, and dreamers. Our admission process is designed to discover the unique spark in every applicant, because we believe education should be as individual as you are.</p>
+    </div>
+
+
+         <!-- Why Choose Us Card -->
+    <div style="background: #ffe6f0; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h2 style="color: #d63384; text-align: center; margin-bottom: 20px;">Why Choose Barbara University?</h2>
+        <ul style="list-style: none; padding-left: 0; line-height: 2; font-size: 1rem; color: #333;">
+            <li>🌸 Globally recognized programs in arts, science, and technology</li>
+            <li>🌸 A safe, supportive, and inclusive campus culture</li>
+            <li>🌸 Strong partnerships with global universities</li>
+            <li>🌸 96% placement rate for graduating students</li>
+        </ul>
+    </div>
+
+    <!-- Pathway Flash Cards -->
+    <div class="admissions-pathways" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div class="pathway-card" style="background: #fff; border: 2px solid #ff69b4; border-radius: 12px; padding: 25px; flex: 1; min-width: 250px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 2rem; color: #ff69b4;"><i class="fas fa-user-graduate"></i></div>
+            <h3 style="color: #d63384; margin-top: 10px;">Undergraduate</h3>
+            <ul style="padding: 0; list-style: none; line-height: 1.8; color: #333;">
+                <li>First-year applicants</li>
+                <li>Transfer students</li>
+                <li>International students</li>
+            </ul>
+            <a href="apply.html" class="btn-pink" style="margin-top: 10px; display: inline-block;">Apply Now</a>
+        </div>
+
+        <div class="pathway-card" style="background: #fff; border: 2px solid #ff69b4; border-radius: 12px; padding: 25px; flex: 1; min-width: 250px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 2rem; color: #ff69b4;"><i class="fas fa-graduation-cap"></i></div>
+            <h3 style="color: #d63384; margin-top: 10px;">Graduate</h3>
+            <ul style="padding: 0; list-style: none; line-height: 1.8; color: #333;">
+                <li>Master's programs</li>
+                <li>Doctoral programs</li>
+                <li>Professional degrees</li>
+            </ul>
+            <a href="apply.html" class="btn-pink" style="margin-top: 10px; display: inline-block;">Apply Now</a>
+        </div>
+
+        <div class="pathway-card" style="background: #fff; border: 2px solid #ff69b4; border-radius: 12px; padding: 25px; flex: 1; min-width: 250px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 2rem; color: #ff69b4;"><i class="fas fa-globe-americas"></i></div>
+            <h3 style="color: #d63384; margin-top: 10px;">International</h3>
+            <ul style="padding: 0; list-style: none; line-height: 1.8; color: #333;">
+                <li>English requirements</li>
+                <li>Visa information</li>
+                <li>Global scholarships</li>
+            </ul>
+            <a href="apply.html" class="btn-pink" style="margin-top: 10px; display: inline-block;">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+        <div class="admissions-timeline">
+            <h2>Admission Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 1</div>
+                    <div class="timeline-content">
+                        <h3>Application Opens</h3>
+                        <p>Begin your online application</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 1</div>
+                    <div class="timeline-content">
+                        <h3>Early Decision Deadline</h3>
+                        <p>For students committed to Barbara U</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 15</div>
+                    <div class="timeline-content">
+                        <h3>Regular Decision Deadline</h3>
+                        <p>Final deadline for fall admission</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Apr 1</div>
+                    <div class="timeline-content">
+                        <h3>Admission Decisions Released</h3>
+                        <p>Check your applicant portal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Facts Section -->
+        <div class="admissions-facts" style="background-color:#f9f9f9; padding: 30px; border-radius: 10px; margin-top: 40px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Barbara At A Glance</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                <div style="flex: 1; min-width: 200px; margin: 15px; text-align: center;">
+                    <h3 style="font-size: 2rem; color: #d63384;">96%</h3>
+                    <p>Graduate Employment</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; margin: 15px; text-align: center;">
+                    <h3 style="font-size: 2rem; color: #d63384;">50+</h3>
+                    <p>Programs Offered</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; margin: 15px; text-align: center;">
+                    <h3 style="font-size: 2rem; color: #d63384;">30+</h3>
+                    <p>Student Clubs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="admissions-faq" style="margin-top: 60px;">
+            <h2>Frequently Asked Questions</h2>
+            <div style="padding: 20px; background: #f5f5f5; border-radius: 8px;">
+                <h4>🎓 What are the eligibility criteria?</h4>
+                <p>Each program has specific requirements. Generally, students must have completed high school or an equivalent for undergraduate admissions and a relevant bachelor's degree for graduate admissions.</p>
+
+                <h4>📅 When should I apply?</h4>
+                <p>We recommend applying as early as possible. Please refer to the timeline above for key dates.</p>
+
+                <h4>💰 Are scholarships available?</h4>
+                <p>Yes, Barbara University offers merit-based and need-based scholarships for domestic and international students.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-address">
+                <h3>Barbara University</h3>
+                <p>Bebo Streets, Bombardino</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@barbarauniversity.edu</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="research.html">Research</a></li>
+                </ul>
+                <ul>
+                    <li><a href="campus-life.html">Campus Life</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="visit.html">Visit</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Barbara University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

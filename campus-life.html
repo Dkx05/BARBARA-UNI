@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Life - Barbara University</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="campus-life.html" class="active">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="apply.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Apply</a></li>
+          <li><a href="visit.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Visit</a></li>
+
+          <li>
+            <div class="search-box">
+              <input type="text" placeholder="SEARCH" id="searchInput" />
+              <button onclick="search()"><i class="fas fa-search"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header campuslife-header">
+    <h1>Campus Life</h1>
+    <p>More than a university - a community</p>
+  </section>
+
+  <!-- Add after the page header -->
+<section class="campuslife-hero" style="text-align: center; padding: 20px;">
+  <img src="images/campuslife.jpg" alt="Campus Life Banner" style="max-width: 400px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+</section>
+
+
+  <section class="campuslife-content" style="background-color: #fff0f5; padding: 30px 0;">
+    <div class="campuslife-intro" style="max-width: 1000px; margin: 0 auto;">
+      <h2>Your Home Away From Home</h2>
+      <p>Life at Barbara University extends far beyond the classroom. With 200+ student organizations, championship athletics, arts programs, and endless opportunities to get involved, you'll find your place and your people here.</p>
+    </div>
+
+    <div class="campuslife-highlights" style="max-width: 1100px; margin: 50px auto;">
+      <h2>Campus Highlights</h2>
+      <div class="highlights-grid">
+        <!-- Housing -->
+        <div class="highlight-card" style="background-color: #ffe6f0; padding: 20px; border-radius: 10px; text-align: center;">
+          <div class="feature-icon" style="font-size: 2rem; margin-bottom: 10px; color: #d63384;"><i class="fas fa-bed"></i></div>
+          <h3>Housing</h3>
+          <p>Live in one of our 15 residence halls with amazing amenities</p>
+          <a href="#" class="btn-pink">Explore Housing</a>
+        </div>
+
+        <!-- Dining -->
+        <div class="highlight-card" style="background-color: #ffe6f0; padding: 20px; border-radius: 10px; text-align: center;">
+          <div class="feature-icon" style="font-size: 2rem; margin-bottom: 10px; color: #d63384;"><i class="fas fa-utensils"></i></div>
+          <h3>Dining</h3>
+          <p>Delicious, diverse meal options across campus</p>
+          <a href="#" class="btn-pink">View Meal Plans</a>
+        </div>
+
+        <!-- Athletics -->
+        <div class="highlight-card" style="background-color: #ffe6f0; padding: 20px; border-radius: 10px; text-align: center;">
+          <div class="feature-icon" style="font-size: 2rem; margin-bottom: 10px; color: #d63384;"><i class="fas fa-football-ball"></i></div>
+          <h3>Athletics</h3>
+          <p>Cheer for our Division I teams or join intramurals</p>
+          <a href="#" class="btn-pink">Sports Schedule</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="campuslife-events" style="max-width: 1000px; margin: 50px auto;">
+      <h2>Upcoming Events</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-date">Sep 12</div>
+          <div class="event-details">
+            <h3>Welcome Week Concert</h3>
+            <p>Main Quad • 7pm</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">Oct 5</div>
+          <div class="event-details">
+            <h3>Homecoming Game</h3>
+            <p>Stadium • 2pm</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">Nov 15</div>
+          <div class="event-details">
+            <h3>International Food Fair</h3>
+            <p>Student Center • 11am-3pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-address">
+        <h3>Barbara University</h3>
+        <p>Bebo Streets, Bombardino</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@barbarauniversity.edu</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+        <ul>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Barbara University. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

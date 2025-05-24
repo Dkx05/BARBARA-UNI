@@ -1,0 +1,2013 @@
+/* Base Styles */
+:root {
+    --light-pink: #f8e1e7;
+    --soft-pink: #f3cbd5;
+    --light-grey: #f5f5f5;
+    --medium-grey: #e0e0e0;
+    --dark-grey: #333333;
+    --text-grey: #555555;
+    --white: #ffffff;
+    --darker-pink: #c2185b;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding-top: 60px;
+    /* Must equal nav height */
+    color: var(--dark-grey);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left ul, .nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-left a,
+.nav-right a {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+
+.nav-left a:hover,
+.nav-right a:hover,
+.nav-left a.active {
+    color: var(--darker-pink);
+    /* Slight color change on hover/active */
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    border: 1px solid var(--medium-grey);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    width: 120px;
+    font-size: 0.85rem;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: var(--darker-pink);
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/* Mobile Nav Adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-left ul, .nav-right ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-box {
+        margin-top: 5px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    /* shows full image but may leave gaps */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/campus.jpeg');
+    z-index: 1;
+}
+
+/* Updated Hero Content Text Colors */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;
+    text-align: center;
+    color: #eeeeee;
+    /* Light grey */
+}
+
+/* Barbara University Heading */
+.cursive-heading {
+    font-family: 'Great Vibes', cursive;
+    /* New stylish font */
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: hsl(0, 12%, 92%);
+    /* Softer grey */
+    margin-bottom: 1.2rem;
+    margin-top: -20px;
+    /* Moves heading slightly up */
+}
+
+/* Start Your Story Button */
+.cta-button {
+    background-color: #888888;
+    /* Grey */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    /* Adds space between button and address */
+    display: inline-block;
+}
+
+/* Address below the button */
+.cta-subtext {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #eeeeee;
+    /* Off-white */
+}
+
+
+
+.cta-button:hover {
+    background-color: #555555;
+    /* Darker grey */
+}
+
+
+
+/* Quick Info Section */
+.quick-info {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: var(--light-grey);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-card {
+    max-width: 300px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* --- Quick Info Cards --- */
+.info-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    /* 🛠 added "ease" for smoothness */
+}
+
+.info-card img:hover {
+    transform: scale(1.03);
+}
+
+.info-card h3 {
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--text-grey);
+    font-size: 0.9rem;
+}
+
+/* --- Featured Section --- */
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    /* ✅ Prevents breaking on narrow screens if not overridden */
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.featured-image {
+    flex: 1;
+    min-width: 280px;
+    /* ✅ ensures image stacks properly on narrow screens */
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-content {
+    flex: 1;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 280px;
+    /* ✅ for responsive balance */
+}
+
+.featured-content h2 {
+    font-size: 2rem;
+    color: var(--dark-grey);
+    margin-bottom: 20px;
+}
+
+.study-areas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.study-areas li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-grey);
+}
+
+.study-areas li::before {
+    content: '•';
+    color: var(--soft-pink);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.learn-more {
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: var(--text-grey);
+}
+
+.learn-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.learn-more:hover i {
+    transform: translateX(5px);
+}
+
+/* --- News Section --- */
+.news {
+    background-color: var(--light-grey);
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark-grey);
+    margin-bottom: 40px;
+}
+
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* ✅ Allows wrap on small screens */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    /* ✅ spacing between items */
+}
+
+.news-item {
+    max-width: 500px;
+    width: 100%;
+    /* ✅ ensures responsiveness */
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-10px);
+}
+
+.news-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.news-text {
+    padding: 20px;
+}
+
+.news-text h3 {
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+}
+
+.news-text p {
+    color: var(--text-grey);
+    font-size: 0.9rem;
+}
+
+/* --- Additional Links --- */
+.additional-links {
+    background-color: var(--white);
+    padding: 60px 20px;
+}
+
+.link-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.link-column {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 220px;
+    /* ✅ avoids collapse on mobile */
+}
+
+.link-column h3 {
+    color: var(--dark-grey);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column li {
+    margin-bottom: 10px;
+}
+
+.link-column a {
+    color: var(--text-grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-column a:hover {
+    color: var(--dark-grey);
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-address h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.footer-address p {
+    margin: 5px 0;
+    color: var(--medium-grey);
+    font-size: 0.9rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--medium-grey);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-social a {
+    color: var(--medium-grey);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--medium-grey);
+    font-size: 0.8rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-left, .nav-right {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .nav-left ul, .nav-right ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cursive-heading {
+        font-size: 2.5rem;
+    }
+
+    .quick-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        margin: 20px 0;
+    }
+
+    .featured {
+        flex-direction: column;
+    }
+
+    .featured-content {
+        padding: 20px 0;
+    }
+
+    .news-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-item {
+        margin: 20px 0;
+    }
+
+    .link-container {
+        flex-direction: column;
+    }
+
+    .link-column {
+        margin-bottom: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-address, .footer-links, .footer-social {
+        margin-bottom: 30px;
+    }
+}
+
+/* Page Header */
+.page-header {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--darker-pink);
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-grey);
+}
+
+/* Admissions / Academics Cards */
+.admissions-options,
+.programs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.option-card,
+.program-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    /* 🛠 added ease */
+}
+
+.option-card:hover,
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card img,
+.program-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.option-card h3,
+.program-card h3 {
+    padding: 20px 20px 10px;
+    color: var(--darker-pink);
+}
+
+.option-card p,
+.program-card ul {
+    padding: 0 20px 20px;
+    color: var(--text-grey);
+}
+
+.program-card ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.program-card li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.program-card li::before {
+    content: '•';
+    color: var(--soft-pink);
+    position: absolute;
+    left: 0;
+}
+
+/* Pink Button */
+.btn {
+    display: inline-block;
+    background-color: var(--light-pink);
+    color: var(--dark-grey);
+    padding: 10px 20px;
+    margin: 0 20px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--soft-pink);
+}
+
+/* Apply Page Form */
+.apply-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+#applicationForm {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--medium-grey);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: var(--darker-pink);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #a82a56;
+}
+
+/* Active nav link underline */
+.nav-left a.active {
+    color: var(--darker-pink);
+    font-weight: 600;
+    border-bottom: 2px solid var(--darker-pink);
+}
+
+/* Research Section */
+.research-header {
+    background: linear-gradient(rgba(248, 225, 231, 0.9), rgba(243, 203, 213, 0.9)),
+        url('https://source.unsplash.com/random/1600x800/?research');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.research-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.research-intro {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.research-intro h2 {
+    color: var(--darker-pink);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.research-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-grey);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.research-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-10px);
+}
+
+.research-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.research-card h3 {
+    padding: 25px 25px 10px;
+    color: var(--darker-pink);
+    font-size: 1.5rem;
+}
+
+.research-card p {
+    padding: 0 25px 15px;
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+.research-card ul {
+    padding: 0 25px 25px;
+    list-style: none;
+}
+
+.research-card li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.research-card li::before {
+    content: '▹';
+    color: var(--soft-pink);
+    position: absolute;
+    left: 0;
+}
+
+.research-stats {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.research-stats h2 {
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--darker-pink);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: var(--text-grey);
+    font-size: 1.1rem;
+}
+
+/* Campus Life Styles */
+.campus-header {
+    background: linear-gradient(rgba(248, 225, 231, 0.9), rgba(243, 203, 213, 0.9)), url('https://source.unsplash.com/random/1600x800/?campus,students');
+    background-size: cover;
+    background-position: center;
+}
+
+.campus-life-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.campus-intro {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.campus-intro h2 {
+    color: var(--darker-pink);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.campus-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-grey);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.highlight-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.highlight-card h3 {
+    padding: 25px 25px 10px;
+    color: var(--darker-pink);
+    font-size: 1.5rem;
+}
+
+.highlight-card p {
+    padding: 0 25px 15px;
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+.highlight-card ul {
+    padding: 0 25px 25px;
+    list-style-type: none;
+}
+
+.highlight-card li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.highlight-card li::before {
+    content: '▹';
+    color: var(--soft-pink);
+    position: absolute;
+    left: 0;
+}
+
+.campus-calendar {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+}
+
+.campus-calendar h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.calendar-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+    background-color: var(--darker-pink);
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 70px;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    color: var(--darker-pink);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.event-details p {
+    color: var(--text-grey);
+    margin: 5px 0;
+}
+
+
+/* About Page Styles */
+.about-header {
+    background: linear-gradient(rgba(248, 225, 231, 0.9), rgba(243, 203, 213, 0.9)), url('https://source.unsplash.com/random/1600x800/?university,history');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-intro {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-intro h2 {
+    color: var(--darker-pink);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-grey);
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.mission-statement {
+    background-color: var(--white);
+    border-left: 5px solid var(--darker-pink);
+    padding: 30px;
+    margin: 40px 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-grey);
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.fact-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.fact-icon {
+    font-size: 2rem;
+    color: var(--darker-pink);
+    margin-right: 20px;
+}
+
+.fact-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--darker-pink);
+}
+
+.fact-text p {
+    color: var(--text-grey);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.leader-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.leader-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.leader-card h3 {
+    color: var(--darker-pink);
+    margin: 20px 0 5px;
+    font-size: 1.5rem;
+}
+
+.leader-card p {
+    color: var(--text-grey);
+    margin: 5px 20px;
+}
+
+.leader-bio {
+    font-style: italic;
+    margin: 15px 20px 25px !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+
+    .leader-image,
+    .highlight-image {
+        height: 200px;
+    }
+
+    .about-intro h2,
+    .campus-intro h2,
+    .leader-card h3,
+    .event-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-intro p,
+    .campus-intro p,
+    .leader-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Visit Page Styles */
+.visit-header {
+    background: linear-gradient(rgba(248, 225, 231, 0.9), rgba(243, 203, 213, 0.9)), url('https://source.unsplash.com/random/1600x800/?campus,visit');
+    background-size: cover;
+    background-position: center;
+}
+
+/* General Visit Section */
+.visit-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.visit-intro {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.visit-intro h2 {
+    color: var(--darker-pink);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.visit-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-grey);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Visit Options */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.option-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.option-card h3 {
+    padding: 25px 25px 10px;
+    color: var(--darker-pink);
+    font-size: 1.5rem;
+}
+
+.option-card p {
+    padding: 0 25px 15px;
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+.option-card ul {
+    padding: 0 25px 25px;
+    list-style-type: none;
+}
+
+.option-card li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.option-card li::before {
+    content: '▹';
+    color: var(--soft-pink);
+    position: absolute;
+    left: 0;
+}
+
+.option-card .btn {
+    margin: 0 25px 25px;
+    display: inline-block;
+}
+
+/* Planning Section */
+.planning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.planning-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.planning-card h3 {
+    color: var(--darker-pink);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.planning-card h3 i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.planning-card p, .planning-card ul {
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+.planning-card ul {
+    padding-left: 20px;
+}
+
+.planning-card li {
+    margin-bottom: 8px;
+}
+
+/* Page Header Global */
+.page-header {
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(248, 225, 231, 0.7), rgba(243, 203, 213, 0.7));
+    z-index: 0;
+}
+
+.page-header h1,
+.page-header p {
+    position: relative;
+    z-index: 1;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    font-size: 1.5rem;
+}
+
+/* Reusable Header Backgrounds */
+.admissions-header {
+    background-image: url('https://source.unsplash.com/random/1600x800/?admissions');
+}
+
+.academics-header {
+    background-image: url('https://source.unsplash.com/random/1600x800/?academics');
+}
+
+.research-header {
+    background-image: url('https://source.unsplash.com/random/1600x800/?research');
+}
+
+.campuslife-header {
+    background-image: url('https://source.unsplash.com/random/1600x800/?campus');
+}
+
+.about-header {
+    background-image: url('https://source.unsplash.com/random/1600x800/?university');
+}
+
+/* CTA Buttons */
+.btn-pink {
+    display: inline-block;
+    background-color: var(--darker-pink);
+    color: white;
+    padding: 12px 25px;
+    margin: 0 20px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: #a82a56;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== Timeline Styles ===== */
+.admissions-timeline {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+}
+
+.admissions-timeline h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: var(--soft-pink);
+}
+
+.timeline-item {
+    padding: 20px 0;
+    position: relative;
+}
+
+.timeline-date {
+    width: 100px;
+    height: 100px;
+    background-color: var(--darker-pink);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.timeline-content h3 {
+    color: var(--darker-pink);
+    margin-top: 0;
+}
+
+.timeline-content p {
+    color: var(--text-grey);
+    margin-bottom: 0;
+}
+
+/* ===== Stats Grid Styles ===== */
+.research-stats {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+}
+
+.research-stats h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--darker-pink);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: var(--text-grey);
+    font-size: 1.1rem;
+}
+
+/* ===== Features Grid Styles ===== */
+.academics-features {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+}
+
+.academics-features h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--darker-pink);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: var(--darker-pink);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-grey);
+    margin-bottom: 0;
+}
+
+/* ===== Events Grid Styles ===== */
+.campuslife-events {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+}
+
+.campuslife-events h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.events-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.event-date {
+    background-color: var(--darker-pink);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 70px;
+}
+
+.event-date span {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.event-details h3 {
+    color: var(--darker-pink);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.event-details p {
+    color: var(--text-grey);
+    margin-bottom: 0;
+}
+
+/* ===== Facts Grid Styles ===== */
+.about-facts {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+}
+
+.about-facts h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fact-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.fact-icon {
+    font-size: 2.5rem;
+    color: var(--darker-pink);
+    margin-bottom: 20px;
+}
+
+.fact-card h3 {
+    color: var(--darker-pink);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.fact-card p {
+    color: var(--text-grey);
+    margin-bottom: 0;
+}
+
+/* ===== Leadership Grid Styles ===== */
+.about-leadership {
+    margin: 60px 0;
+}
+
+.about-leadership h2 {
+    text-align: center;
+    color: var(--darker-pink);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.leader-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.leader-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.leader-card h3 {
+    color: var(--darker-pink);
+    margin: 20px 0 5px;
+    font-size: 1.5rem;
+}
+
+.leader-card p {
+    color: var(--text-grey);
+    margin: 5px 0 20px;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-header p {
+        font-size: 1.2rem;
+    }
+
+    .admissions-pathways,
+    .schools-grid,
+    .areas-grid,
+    .highlights-grid,
+    .features-grid,
+    .facts-grid,
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-container::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-date {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        margin: 0;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+}
+
+/* Show full image of Diago Darbie */
+.full-image-item img.show-full-image {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Existing styles remain unchanged */
+
+/* Additional styles for admission page */
+.admission-page {
+    background-color: #ffe6f0;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffccdd;
+}
+
+.admission-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.admission-info, .admission-steps {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff0f5;
+    border-radius: 8px;
+}
+
+.admission-info h2, .admission-steps h2 {
+    color: #d63384;
+}
+
+.admission-info ul, .admission-steps ol {
+    margin-left: 1.5rem;
+}
+
+.admission-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffccdd;
+    margin-top: 2rem;
+}
+
+
+/* Academic Highlights Section */
+.academic-highlights .feature-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+}
+
+.testimonial-item {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-style: italic;
+    color: #444;
+}
+
+.testimonial-item h4 {
+    margin-top: 10px;
+    color: #d63384;
+    font-weight: 600;
+}
+
+/* Images & Icons */
+.academics-hero img,
+.about-hero img,
+.campuslife-hero img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.school-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Fact Cards */
+.facts-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.fact-card {
+    background-color: #ffe6f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+.fact-icon {
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+/* Leadership Cards */
+.leadership-grid .leader-card {
+    background-color: #ffe6f0;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.leader-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn-pink {
+    background-color: #d63384;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pink:hover {
+    background-color: #c02572;
+}
+
+/* News Section Image */
+.news-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Global Scrolling Behavior */
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-left ul,
+    .nav-right ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .quick-info,
+    .news-grid,
+    .link-container,
+    .featured {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .featured-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-card,
+    .news-item,
+    .planning-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
+
+/* Navigation Bar - Smaller Font Size */
+.main-nav {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    padding: 8px 0;
+}
+
+.nav-left a,
+.nav-right a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 6px 10px;
+}
+
+/* Pink buttons - Adjusted to match */
+.btn-pink {
+    font-size: 0.75rem !important;
+    padding: 6px 14px !important;
+}
+
+/* Search box - Smaller to match */
+.search-box {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+}
+
+.search-box input {
+    font-size: 0.75rem;
+    width: 100px;
+}
+
+/* Ensure proper spacing between nav items */
+.nav-left ul,
+.nav-right ul {
+    gap: 8px;
+}
+
+/* Right-aligned nav section spacing */
+.nav-right {
+    gap: 12px;
+}
+
+/* Active state - subtle pink underline */
+.nav-left a.active {
+    color: var(--darker-pink);
+    border-bottom: 2px solid var(--soft-pink);
+    padding-bottom: 4px;
+}
+
+/* Hover effects */
+.nav-left a:hover {
+    color: var(--darker-pink);
+    transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .nav-left a,
+    .nav-right a {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    .btn-pink {
+        font-size: 0.7rem !important;
+        padding: 4px 10px !important;
+    }
+
+    .search-box {
+        font-size: 0.7rem;
+    }
+}
+
+
+.admissions-faq h4 {
+    margin-top: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.admissions-faq p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 0.95rem;
+}

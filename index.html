@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barbara University - Excellence in Education</title>
+  <meta name="description" content="Barbara University offers top-tier undergraduate and graduate programs, vibrant campus life, and innovative research opportunities.">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="apply.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Apply</a></li>
+          <li><a href="visit.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Visit</a></li>
+          <li>
+            <div class="search-box">
+              <input type="text" placeholder="SEARCH" id="searchInput"/>
+              <button onclick="search()"><i class="fas fa-search"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('images/campus.jpeg');"></div>
+    <div class="hero-content">
+      <h1 class="cursive-heading">Barbara University</h1>
+      <div class="hero-cta">
+        <a href="visit.html" class="cta-button">Start Your Story</a>
+        <div class="cta-subtext">Bebo Streets, Bombardino</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Undergraduate Admissions Section -->
+  <section class="quick-info full-width">
+    <div class="info-card large-card">
+      <img src="images/walkway.jpg" alt="Campus Walkway"/>
+      <h3>Undergraduate Admissions</h3>
+      <p>
+        Begin your academic journey with us at Barbara University. We provide a diverse curriculum and a supportive learning environment. With opportunities for research, leadership, and international programs, our undergraduates thrive in an innovative setting.
+      </p>
+    </div>
+    <div class="info-card">
+      <img src="images/classroom.jpg" alt="Modern Classroom"/>
+      <h3>Graduate Programs</h3>
+      <p>
+        Elevate your career with our graduate programs. Our advanced degrees provide in-depth knowledge, real-world applications, and one-on-one mentorship from world-class faculty.
+      </p>
+    </div>
+    <div class="info-card">
+      <img src="images/court.jpg" alt="Sports Court"/>
+      <h3>Research Opportunities</h3>
+      <p>
+        Engage in meaningful research in science, arts, technology, and humanities. Barbara University offers funded research opportunities for both graduates and undergraduates.
+      </p>
+    </div>
+  </section>
+
+  <!-- Areas of Study -->
+  <section class="featured stylish-study">
+    <div class="featured-image">
+      <img src="images/hall.jpg" alt="University Hall"/>
+    </div>
+    <div class="featured-content">
+      <h2 style="font-family: 'Playfair Display', serif;">Areas of Study</h2>
+      <p>
+        At Barbara University, academic excellence meets real-world impact. We offer programs across disciplines that prepare students to be leaders, innovators, and problem solvers.
+      </p>
+      <ul class="study-areas">
+        <li>Engineering & Technology – Cutting-edge labs and faculty innovators</li>
+        <li>Business & Economics – Practical experience and international connections</li>
+        <li>Humanities & Arts – Explore creativity, culture, and communication</li>
+        <li>Sciences – Biology, Chemistry, Physics and Interdisciplinary Programs</li>
+        <li>Education – Train to be future-ready teachers and curriculum leaders</li>
+      </ul>
+      <a href="academics.html" class="learn-more">Explore Academics <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- University Board Section -->
+  <section class="news">
+    <h2 class="section-title">University Board</h2>
+    <div class="news-grid">
+      <div class="news-item full-image-item">
+        <img src="images/principal.jpg" alt="University Principal" class="show-full-image"/>
+        <div class="news-text">
+          <h3>Diago Darbie</h3>
+          <p>
+            Principal & Executive Director<br>
+            Ph.D. in Education Leadership – Harvard University<br>
+            Former Dean at Oxford Global Institute<br>
+            Advocate for inclusive education and modern academic reform.
+          </p>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="images/interior.jpg" alt="University Interior" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;" />
+        <div class="news-text">
+          <h3>Board Statement</h3>
+          <p>
+            The University Board of Barbara University proudly reaffirms our dedication to the institution’s founding mission: to cultivate an environment of academic excellence, inclusive community, and transformational learning.
+          </p>
+          <p>
+            As we move forward, our focus is clear: enhancing the student experience, expanding accessibility through financial aid and scholarships, and investing in faculty and facilities that drive discovery and opportunity.
+          </p>
+          <p>
+            On behalf of the entire board, we thank our students, faculty, alumni, and partners for their ongoing support and commitment to our shared values.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Links -->
+  <section class="additional-links">
+    <div class="link-container">
+      <div class="link-column">
+        <h3>Admissions</h3>
+        <ul>
+          <li><a href="admissions.html">Undergraduate</a></li>
+          <li><a href="admissions.html">Graduate</a></li>
+          <li><a href="admissions.html">Transfer</a></li>
+          <li><a href="admissions.html">International</a></li>
+          <li><a href="admissions.html">Online</a></li>
+          <li><a href="admissions.html">Cost & Aid</a></li>
+        </ul>
+      </div>
+      <div class="link-column">
+        <h3>Student Life</h3>
+        <ul>
+          <li><a href="campus-life.html">Housing</a></li>
+          <li><a href="campus-life.html">Dining</a></li>
+          <li><a href="campus-life.html">Clubs</a></li>
+          <li><a href="campus-life.html">Athletics</a></li>
+          <li><a href="campus-life.html">Arts</a></li>
+        </ul>
+      </div>
+      <div class="link-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">History</a></li>
+          <li><a href="about.html">Leadership</a></li>
+          <li><a href="about.html">Careers</a></li>
+          <li><a href="about.html">Alumni</a></li>
+          <li><a href="about.html">Give</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-address">
+        <h3>Barbara University</h3>
+        <p>Bebo Streets, Bombardino</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@barbarauniversity.edu</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="campus-life.html">Athletics</a></li>
+          <li><a href="about.html">Alumni</a></li>
+          <li><a href="#">Health Care</a></li>
+          <li><a href="admissions.html">Request Info</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Barbara University. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function search() {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query) {
+        alert("You searched for: " + query);
+      } else {
+        alert("Please enter a search term.");
+      }
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
