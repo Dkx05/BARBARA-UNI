@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visit - Barbara University</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="apply.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Apply</a></li>
+          <li><a href="visit.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Visit</a></li>
+          <li>
+            <div class="search-box">
+              <input type="text" placeholder="SEARCH" id="searchInput" />
+              <button onclick="search()"><i class="fas fa-search"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header visit-header" style="background-color: #fff0f5; padding: 40px 0; text-align: center;">
+    <h1>Visit Barbara University</h1>
+    <p>Come for the campus tour, stay for the free cookies (and maybe an education)</p>
+  </section>
+
+  <!-- Hero Image -->
+  <section style="text-align: center; padding: 20px;">
+    <img src="images/visit.jpg" alt="Visit Campus" style="max-width: 400px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </section>
+
+  <!-- Visit Content -->
+  <section class="visit-content" style="background-color: #ffe6f0; padding: 40px 0;">
+    <div class="visit-intro" style="max-width: 1000px; margin: 0 auto;">
+      <h2>See For Yourself Why We're Worth the Student Loans</h2>
+      <p>Pictures are great, but there's nothing like experiencing our campus in person (the smell of old books and fresh coffee is hard to capture digitally). Whether you're a prospective student, proud parent, or just really into college architecture, we'd love to show you around.</p>
+    </div>
+
+    <div class="visit-options" style="max-width: 1100px; margin: 50px auto;">
+      <h2>Ways to Visit</h2>
+      <div class="options-grid">
+        <!-- Campus Tours -->
+        <div class="option-card" style="background-color: #fff; border-radius: 10px; padding: 20px;">
+         <div class="option-image" style="background-image: url('images/interior.jpg'); height: 200px; border-radius: 10px; background-size: cover;"></div>
+
+          <h3>Campus Tours</h3>
+          <p>Our student guides will show you all the highlights, from the library to the best nap spots. Tours last about 90 minutes and include:</p>
+          <ul>
+            <li>Academic buildings</li>
+            <li>Residence halls</li>
+            <li>Dining facilities</li>
+            <li>Secret student spots</li>
+          </ul>
+          <a href="#" class="btn-pink">Schedule a Tour</a>
+        </div>
+
+        <!-- Open Houses -->
+        <div class="option-card" style="background-color: #fff; border-radius: 10px; padding: 20px;">
+         <div class="option-image" style="background-image: url('images/court.jpg'); height: 200px; border-radius: 10px; background-size: cover;"></div>
+
+          <h3>Open Houses</h3>
+          <p>Experience Barbara U like a real student. Open houses include:</p>
+          <ul>
+            <li>Faculty meet-and-greets</li>
+            <li>Sample classes</li>
+            <li>Student panels</li>
+            <li>Free swag</li>
+          </ul>
+          <a href="#" class="btn-pink">Register for Open House</a>
+        </div>
+
+        <!-- Virtual Tours -->
+        <div class="option-card" style="background-color: #fff; border-radius: 10px; padding: 20px;">
+          <div class="option-image" style="background-image: url('images/virtual.jpg'); height: 200px; border-radius: 10px; background-size: cover;"></div>
+
+          <h3>Virtual Visits</h3>
+          <p>Can’t make it in person? Join us virtually with:</p>
+          <ul>
+            <li>360° tours</li>
+            <li>Live Q&As</li>
+            <li>Digital viewbooks</li>
+            <li>Virtual dorm tours</li>
+          </ul>
+          <a href="#" class="btn-pink">Start Virtual Tour</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planning Section -->
+    <div class="visit-planning" style="max-width: 1000px; margin: 50px auto;">
+      <h2>Plan Your Visit</h2>
+      <div class="planning-grid">
+        <div class="planning-card">
+          <h3><i class="fas fa-map-marked-alt"></i> Getting Here</h3>
+          <p>We’re located in Bombardino, where the streets are named after coffee drinks.</p>
+          <p><strong>Address:</strong> 123 Bebo Streets, Bombardino, BU 12345</p>
+          <p><strong>Tip:</strong> Search for “Barbara University” on GPS (not “fountain place”).</p>
+        </div>
+        <div class="planning-card">
+          <h3><i class="fas fa-bed"></i> Where to Stay</h3>
+          <p>Nearby hotels with great rates:</p>
+          <ul>
+            <li>The Scholastic Suites</li>
+            <li>Bombardino Inn</li>
+            <li>Campus Comfort</li>
+          </ul>
+        </div>
+        <div class="planning-card">
+          <h3><i class="fas fa-utensils"></i> Where to Eat</h3>
+          <p>Check out these local spots:</p>
+          <ul>
+            <li>The Hungry Scholar</li>
+            <li>Brain Freeze Creamery</li>
+            <li>Library Café</li>
+          </ul>
+          <p>Prospective students eat free. Parents pay double.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-address">
+        <h3>Barbara University</h3>
+        <p>Bebo Streets, Bombardino</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@barbarauniversity.edu</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+        <ul>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Barbara University. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

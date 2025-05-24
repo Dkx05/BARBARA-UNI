@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Barbara University</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+        <li><a href="apply.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Apply</a></li>
+        <li><a href="visit.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Visit</a></li>
+
+          <li>
+            <div class="search-box">
+              <input type="text" placeholder="SEARCH" id="searchInput" />
+              <button onclick="search()"><i class="fas fa-search"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header about-header">
+    <h1>About Barbara University</h1>
+    <p>Tradition meets innovation</p>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="about-hero" style="text-align: center; padding: 20px;">
+    <img src="images/about.jpg" alt="About Hero" style="max-width: 400px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </section>
+
+  <section class="about-content" style="background-color: #fff0f5; padding: 30px 0;">
+    <div class="about-intro" style="max-width: 1000px; margin: 0 auto;">
+      <h2>Our Story</h2>
+      <p>Founded in 1892, Barbara University has grown from a small women's college to a nationally recognized research university while maintaining our commitment to personalized education. Our beautiful 200-acre campus in Bombardino provides the perfect environment for learning and discovery.</p>
+    </div>
+
+   <!-- Fast Facts -->
+<!-- Fast Facts (Updated for layout fix) -->
+<div class="about-facts" style="max-width: 1000px; margin: 40px auto;">
+  <h2>Fast Facts</h2>
+  <div class="facts-grid" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <div class="fact-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+      <div class="fact-icon" style="font-size: 2rem; color: #d63384;"><i class="fas fa-users"></i></div>
+      <div style="margin-top: 10px;">
+        <h3 style="margin: 0; font-size: 1.5rem;">8,000+</h3>
+        <p style="margin-top: 5px; font-size: 0.95rem;">Undergraduate Students</p>
+      </div>
+    </div>
+
+    <div class="fact-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+      <div class="fact-icon" style="font-size: 2rem; color: #d63384;"><i class="fas fa-chalkboard-teacher"></i></div>
+      <div style="margin-top: 10px;">
+        <h3 style="margin: 0; font-size: 1.5rem;">12:1</h3>
+        <p style="margin-top: 5px; font-size: 0.95rem;">Student-Faculty Ratio</p>
+      </div>
+    </div>
+
+    <div class="fact-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+      <div class="fact-icon" style="font-size: 2rem; color: #d63384;"><i class="fas fa-globe-americas"></i></div>
+      <div style="margin-top: 10px;">
+        <h3 style="margin: 0; font-size: 1.5rem;">50+</h3>
+        <p style="margin-top: 5px; font-size: 0.95rem;">Countries Represented</p>
+      </div>
+    </div>
+
+    <div class="fact-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+      <div class="fact-icon" style="font-size: 2rem; color: #d63384;"><i class="fas fa-building"></i></div>
+      <div style="margin-top: 10px;">
+        <h3 style="margin: 0; font-size: 1.5rem;">200</h3>
+        <p style="margin-top: 5px; font-size: 0.95rem;">Acres of Campus</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<!-- Leadership -->
+<div class="about-leadership" style="background-color: #fff0f5; padding: 40px 0;">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2>University Leadership</h2>
+    <div class="leadership-grid" style="display: grid; gap: 25px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+      <div class="leader-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+        <div class="feature-icon" style="font-size: 3rem; color: #d63384;"><i class="fas fa-user-tie"></i></div>
+        <h3 style="margin-top: 10px;">Dr. Elizabeth Morgan</h3>
+        <p>University President</p>
+      </div>
+      <div class="leader-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+        <div class="feature-icon" style="font-size: 3rem; color: #d63384;"><i class="fas fa-user-graduate"></i></div>
+        <h3 style="margin-top: 10px;">Dr. Robert Chen</h3>
+        <p>Provost</p>
+      </div>
+      <div class="leader-card" style="background-color: #ffe6f0; border-radius: 10px; padding: 20px; text-align: center;">
+        <div class="feature-icon" style="font-size: 3rem; color: #d63384;"><i class="fas fa-user-friends"></i></div>
+        <h3 style="margin-top: 10px;">Dr. Maria Rodriguez</h3>
+        <p>Dean of Students</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-address">
+        <h3>Barbara University</h3>
+        <p>Bebo Streets, Bombardino</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@barbarauniversity.edu</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+        <ul>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Barbara University. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research - Barbara University</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+ <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="apply.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Apply</a></li>
+          <li><a href="visit.html" class="btn-pink" style="padding: 6px 14px; font-size: 0.9rem;">Visit</a></li>
+
+          <li>
+            <div class="search-box">
+              <input type="text" placeholder="SEARCH" id="searchInput" />
+              <button onclick="search()"><i class="fas fa-search"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header research-header">
+    <h1>Innovation Through Research</h1>
+    <p>Pushing boundaries, expanding knowledge</p>
+  </section>
+
+  <!-- Hero image for research -->
+  <section class="research-hero" style="text-align: center; padding: 20px;">
+    <img src="images/research.jpg" alt="Research Banner" style="max-width: 400px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  </section>
+
+  <section class="research-content" style="background-color: #fff0f5; padding: 30px 0;">
+    <div class="research-intro" style="max-width: 1000px; margin: 0 auto;">
+      <h2>Research That Matters</h2>
+      <p>At Barbara University, research isn't just about publishing papers - it's about solving real-world problems. Our faculty and students collaborate across disciplines to make discoveries that change lives and shape the future.</p>
+    </div>
+
+   <div class="research-areas" style="max-width: 1100px; margin: 50px auto;">
+  <h2>Research Areas</h2>
+  <div class="areas-grid">
+    <!-- Technology -->
+    <div class="area-card" style="background-color: #ffe6f0; padding: 20px; border-radius: 10px; text-align: center;">
+      <div class="feature-icon" style="font-size: 2rem; margin-bottom: 10px; color: #d63384;"><i class="fas fa-laptop-code"></i></div>
+      <h3>Technology & Innovation</h3>
+      <p>Advancing computing, engineering, and digital transformation</p>
+      <a href="#" class="btn-pink">Learn More</a>
+    </div>
+
+    <!-- Health -->
+    <div class="area-card" style="background-color: #ffe6f0; padding: 20px; border-radius: 10px; text-align: center;">
+      <div class="feature-icon" style="font-size: 2rem; margin-bottom: 10px; color: #d63384;"><i class="fas fa-dna"></i></div>
+      <h3>Health & Life Sciences</h3>
+      <p>Improving human health through biomedical research</p>
+      <a href="#" class="btn-pink">Learn More</a>
+    </div>
+
+    <!-- Sustainability -->
+    <div class="area-card" style="background-color: #ffe6f0; padding: 20px; border-radius: 10px; text-align: center;">
+      <div class="feature-icon" style="font-size: 2rem; margin-bottom: 10px; color: #d63384;"><i class="fas fa-leaf"></i></div>
+      <h3>Sustainability</h3>
+      <p>Developing solutions for environmental challenges</p>
+      <a href="#" class="btn-pink">Learn More</a>
+    </div>
+  </div>
+</div>
+
+
+    <div class="research-stats" style="max-width: 1100px; margin: 50px auto;">
+      <h2>By The Numbers</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">$85M</div>
+          <div class="stat-label">Annual Research Funding</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Research Centers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1,200+</div>
+          <div class="stat-label">Student Researchers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">45</div>
+          <div class="stat-label">Patents Last Year</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: Research Highlights -->
+    <div class="research-highlights" style="background-color: #ffe6f0; padding: 40px 0;">
+      <div class="features-grid" style="max-width: 1000px; margin: 0 auto;">
+        <div class="feature-card">
+          <i class="fas fa-microscope fa-2x" style="color:#d63384;"></i>
+          <h3>Interdisciplinary Labs</h3>
+          <p>Where computer science meets medicine, and engineering meets art.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-lightbulb fa-2x" style="color:#d63384;"></i>
+          <h3>Innovation Incubators</h3>
+          <p>Turn student ideas into start-ups through funding and mentorship.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-globe fa-2x" style="color:#d63384;"></i>
+          <h3>Global Collaboration</h3>
+          <p>Partnered with 60+ international research institutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: Testimonials -->
+    <div class="testimonials" style="background-color: #fff0f5; padding: 40px 0;">
+      <div style="max-width: 900px; margin: auto; text-align: center;">
+        <h2>Voices from the Lab</h2>
+        <div class="testimonial-item" style="margin-top: 30px;">
+          <p>"Working in research at Barbara was a turning point in my academic life."</p>
+          <h4>- Dr. Anjali Patel, Postdoctoral Fellow</h4>
+        </div>
+        <div class="testimonial-item" style="margin-top: 30px;">
+          <p>"I never imagined being part of a team that discovers cancer treatments as an undergraduate."</p>
+          <h4>- Jamie Rivera, Class of 2023</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-address">
+        <h3>Barbara University</h3>
+        <p>Bebo Streets, Bombardino</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@barbarauniversity.edu</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+        <ul>
+          <li><a href="campus-life.html">Campus Life</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Barbara University. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
